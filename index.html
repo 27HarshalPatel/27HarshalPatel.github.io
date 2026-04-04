@@ -1,460 +1,964 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Harshal Anil Patel — AI Engineer & Researcher</title>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@300;400;500&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Harshal Patel — AI/ML Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root {
-  --ink: #0a0a0f; --paper: #f5f3ee; --paper2: #ede9e2;
-  --accent: #c8401a; --muted: #7a7060; --border: #d4cfc5; --white: #faf9f6;
-}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--paper);color:var(--ink);font-family:'Geist',sans-serif;font-weight:300;line-height:1.6}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 48px;display:flex;justify-content:space-between;align-items:center;background:rgba(245,243,238,0.93);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
-.nav-name{font-family:'Instrument Serif',serif;font-size:1.1rem}
-.nav-links{display:flex;gap:32px;list-style:none}
-.nav-links a{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;text-decoration:none;color:var(--muted);font-family:'Geist Mono',monospace;transition:color 0.2s}
-.nav-links a:hover{color:var(--accent)}
-.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding:120px 48px 80px;gap:60px;align-items:center;position:relative;overflow:hidden}
-.hero::before{content:'AI';position:absolute;right:-20px;top:50%;transform:translateY(-50%);font-family:'Instrument Serif',serif;font-size:28vw;color:rgba(200,64,26,0.04);pointer-events:none;line-height:1;user-select:none}
-.hero-eyebrow{font-family:'Geist Mono',monospace;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--accent);margin-bottom:24px;display:flex;align-items:center;gap:12px}
-.hero-eyebrow::before{content:'';width:40px;height:1px;background:var(--accent);display:inline-block}
-.hero-name{font-family:'Instrument Serif',serif;font-size:clamp(3rem,5vw,5.5rem);line-height:1.0;letter-spacing:-0.02em;margin-bottom:8px}
-.hero-name em{font-style:italic;color:var(--accent)}
-.hero-title{font-family:'Geist Mono',monospace;font-size:0.85rem;color:var(--muted);letter-spacing:0.05em;margin-bottom:32px}
-.hero-desc{font-size:1.05rem;color:var(--muted);max-width:440px;line-height:1.75;margin-bottom:40px}
-.hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:40px}
-.badge{font-family:'Geist Mono',monospace;font-size:0.68rem;padding:5px 12px;border:1px solid var(--border);border-radius:2px;color:var(--muted);letter-spacing:0.05em;text-transform:uppercase}
-.badge.hot{border-color:var(--accent);color:var(--accent)}
-.cta-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
-.btn-primary-cta{font-family:'Geist Mono',monospace;font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;padding:14px 28px;background:var(--accent);color:#fff;border:none;cursor:pointer;text-decoration:none;display:inline-block;transition:all 0.2s}
-.btn-primary-cta:hover{background:#a33216}
-.btn-ghost-cta{font-family:'Geist Mono',monospace;font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;padding:13px 28px;border:1px solid var(--border);color:var(--muted);text-decoration:none;display:inline-block;transition:all 0.2s}
-.btn-ghost-cta:hover{border-color:var(--ink);color:var(--ink)}
-.hero-right{background:var(--white);border:1px solid var(--border);padding:40px;position:relative}
-.hero-right::before{content:'';position:absolute;top:-1px;left:40px;width:60px;height:3px;background:var(--accent)}
-.stats-title{font-family:'Geist Mono',monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted);margin-bottom:28px}
-.stat-row{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px}
-.stat-num{font-family:'Instrument Serif',serif;font-size:2.8rem;line-height:1;color:var(--ink)}
-.stat-num sup{font-size:1.2rem}
-.stat-label{font-family:'Geist Mono',monospace;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-top:4px}
-.divider{height:1px;background:var(--border);margin:24px 0}
-.availability-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(52,211,153,0.1);border:1px solid rgba(52,211,153,0.3);padding:8px 16px;border-radius:2px;font-family:'Geist Mono',monospace;font-size:0.7rem;color:#059669;letter-spacing:0.05em}
-.avail-dot{width:6px;height:6px;border-radius:50%;background:#10b981;animation:blink 2s infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
-.contact-info{margin-top:20px;font-family:'Geist Mono',monospace;font-size:0.68rem;color:var(--muted);line-height:1.9;letter-spacing:0.04em}
-section{padding:100px 48px;border-top:1px solid var(--border)}
-.section-header{display:grid;grid-template-columns:1fr 2fr;gap:60px;margin-bottom:64px;align-items:start}
-.section-label{font-family:'Geist Mono',monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--muted);padding-top:8px;display:flex;align-items:center;gap:12px}
-.section-label::before{content:'';width:24px;height:1px;background:var(--muted)}
-.section-title{font-family:'Instrument Serif',serif;font-size:clamp(2rem,3.5vw,3.5rem);line-height:1.1;letter-spacing:-0.02em}
-.section-title em{font-style:italic;color:var(--accent)}
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:2px}
-.skill-block{background:var(--white);border:1px solid var(--border);padding:28px;transition:all 0.2s;position:relative;overflow:hidden}
-.skill-block::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform 0.3s}
-.skill-block:hover::after{transform:scaleX(1)}
-.skill-block:hover{background:var(--paper2)}
-.skill-icon{font-size:1.5rem;margin-bottom:12px}
-.skill-name{font-family:'Geist',sans-serif;font-weight:500;font-size:0.95rem;margin-bottom:8px}
-.skill-desc{font-size:0.82rem;color:var(--muted);line-height:1.6;margin-top:6px}
-.skill-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:10px}
-.skill-tag{font-family:'Geist Mono',monospace;font-size:0.62rem;padding:3px 8px;background:var(--paper2);color:var(--muted);border-radius:1px;letter-spacing:0.04em}
-.exp-item{display:grid;grid-template-columns:200px 1fr;gap:40px;padding:40px 0;border-bottom:1px solid var(--border)}
-.exp-item:last-child{border-bottom:none}
-.exp-period{font-family:'Geist Mono',monospace;font-size:0.72rem;color:var(--accent);letter-spacing:0.05em;margin-bottom:6px}
-.exp-company{font-weight:600;font-size:0.9rem;margin-bottom:4px}
-.exp-loc{font-family:'Geist Mono',monospace;font-size:0.65rem;color:var(--muted);letter-spacing:0.05em}
-.exp-role{font-family:'Instrument Serif',serif;font-size:1.6rem;line-height:1.2;margin-bottom:16px}
-.exp-bullets{list-style:none}
-.exp-bullets li{font-size:0.88rem;color:var(--muted);padding:5px 0 5px 18px;position:relative;line-height:1.6}
-.exp-bullets li::before{content:'→';position:absolute;left:0;color:var(--accent);font-size:0.75rem}
-.exp-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
-.exp-tag{font-family:'Geist Mono',monospace;font-size:0.62rem;padding:3px 10px;border:1px solid var(--border);color:var(--muted);letter-spacing:0.04em}
-.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:2px}
-.project-card{background:var(--white);border:1px solid var(--border);padding:36px;transition:all 0.25s;position:relative}
-.project-card:hover{border-color:var(--accent);background:#fff;transform:translateY(-2px);box-shadow:0 12px 40px rgba(200,64,26,0.08)}
-.project-num{font-family:'Instrument Serif',serif;font-size:3rem;color:var(--border);line-height:1;margin-bottom:16px}
-.project-name{font-family:'Instrument Serif',serif;font-size:1.5rem;margin-bottom:8px;line-height:1.2}
-.project-stack{font-family:'Geist Mono',monospace;font-size:0.65rem;color:var(--accent);letter-spacing:0.06em;margin-bottom:14px}
-.project-desc{font-size:0.85rem;color:var(--muted);line-height:1.7;margin-bottom:18px}
-.project-metrics{display:flex;gap:20px;flex-wrap:wrap}
-.metric-val{font-family:'Instrument Serif',serif;font-size:1.4rem;color:var(--ink)}
-.metric-label{font-family:'Geist Mono',monospace;font-size:0.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em}
-#ai-chat{background:var(--ink);color:var(--paper)}
-#ai-chat .section-label{color:rgba(245,243,238,0.4)}
-#ai-chat .section-label::before{background:rgba(245,243,238,0.4)}
-#ai-chat .section-title{color:var(--paper)}
-.chat-container{max-width:720px;margin:0 auto}
-.chat-intro{color:rgba(245,243,238,0.5);font-size:0.85rem;margin-bottom:20px;line-height:1.7}
-.quick-questions{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
-.quick-q{font-family:'Geist Mono',monospace;font-size:0.68rem;padding:7px 14px;border:1px solid rgba(255,255,255,0.12);color:rgba(245,243,238,0.6);background:transparent;cursor:pointer;transition:all 0.2s;letter-spacing:0.04em}
-.quick-q:hover{border-color:var(--accent);color:var(--accent);background:rgba(200,64,26,0.08)}
-.chat-window{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);overflow:hidden}
-.chat-header{padding:16px 24px;background:rgba(200,64,26,0.15);border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;gap:12px;font-family:'Geist Mono',monospace;font-size:0.72rem;letter-spacing:0.08em;color:rgba(245,243,238,0.7)}
-.chat-dot{width:8px;height:8px;border-radius:50%;background:#10b981;animation:blink 2s infinite}
-.chat-messages{min-height:280px;max-height:400px;overflow-y:auto;padding:24px;display:flex;flex-direction:column;gap:16px}
-.chat-messages::-webkit-scrollbar{width:4px}
-.chat-messages::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.1)}
-.msg{max-width:85%;font-size:0.88rem;line-height:1.65;padding:12px 16px;border-radius:2px}
-.msg.user{background:rgba(200,64,26,0.2);border:1px solid rgba(200,64,26,0.3);color:var(--paper);align-self:flex-end}
-.msg.assistant{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:rgba(245,243,238,0.85);align-self:flex-start;white-space:pre-line}
-.msg.typing{background:rgba(255,255,255,0.04);color:rgba(245,243,238,0.4);font-family:'Geist Mono',monospace;font-size:0.75rem;align-self:flex-start;letter-spacing:0.2em}
-.chat-input-row{display:flex;border-top:1px solid rgba(255,255,255,0.08)}
-.chat-input{flex:1;background:transparent;border:none;padding:16px 20px;color:var(--paper);font-family:'Geist',sans-serif;font-size:0.88rem;outline:none}
-.chat-input::placeholder{color:rgba(245,243,238,0.25)}
-.chat-send{background:var(--accent);border:none;padding:16px 24px;color:#fff;font-family:'Geist Mono',monospace;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;cursor:pointer;transition:background 0.2s}
-.chat-send:hover{background:#a33216}
-.chat-send:disabled{opacity:0.4;cursor:not-allowed}
-.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
-.edu-card{background:var(--white);border:1px solid var(--border);padding:36px}
-.edu-degree{font-family:'Instrument Serif',serif;font-size:1.4rem;margin-bottom:8px;line-height:1.3}
-.edu-school{font-weight:500;font-size:0.9rem;margin-bottom:4px;color:var(--accent)}
-.edu-details{font-family:'Geist Mono',monospace;font-size:0.68rem;color:var(--muted);letter-spacing:0.06em;margin-bottom:16px}
-.edu-courses{font-size:0.8rem;color:var(--muted);line-height:1.7}
-.certs-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-.cert-chip{display:flex;align-items:center;gap:10px;border:1px solid var(--border);padding:12px 20px;font-size:0.82rem;background:var(--white);transition:all 0.2s}
-.cert-chip:hover{border-color:var(--accent)}
-footer{padding:60px 48px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
-.footer-name{font-family:'Instrument Serif',serif;font-size:1.4rem}
-.footer-links{display:flex;gap:24px}
-.footer-links a{font-family:'Geist Mono',monospace;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);text-decoration:none;transition:color 0.2s}
-.footer-links a:hover{color:var(--accent)}
+  :root {
+    --bg: #0a0a0a;
+    --bg2: #111111;
+    --bg3: #161616;
+    --card: #141414;
+    --border: #222222;
+    --gold: #c8973a;
+    --gold-light: #e8b85a;
+    --gold-dim: rgba(200,151,58,0.15);
+    --text: #e8e4dc;
+    --text-dim: #888880;
+    --text-faint: #444440;
+    --green: #4caf7a;
+    --red: #e05555;
+    --radius: 4px;
+  }
 
-/* SAFE REVEAL: visible by default, enhanced by JS */
-.anim{opacity:1;transform:none}
-.js-ready .anim{opacity:0;transform:translateY(22px);transition:opacity 0.7s ease,transform 0.7s ease}
-.js-ready .anim.in{opacity:1;transform:none}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-@media(max-width:900px){
-  .hero{grid-template-columns:1fr;padding:100px 24px 60px}
-  .hero::before{display:none}
-  section{padding:60px 24px}
-  .section-header{grid-template-columns:1fr;gap:16px}
-  .exp-item{grid-template-columns:1fr;gap:12px}
-  .edu-grid{grid-template-columns:1fr}
-  nav{padding:16px 24px}
-  .nav-links{display:none}
-  footer{flex-direction:column;gap:24px;text-align:center}
-  .projects-grid{grid-template-columns:1fr}
-  .skills-grid{grid-template-columns:1fr}
-}
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── NOISE OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 999; opacity: 0.5;
+  }
+
+  /* ── SCROLLBAR ── */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 4rem;
+    background: rgba(10,10,10,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; font-weight: 700;
+    color: var(--gold); letter-spacing: 0.04em;
+    text-decoration: none;
+  }
+
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem; font-weight: 400;
+    color: var(--text-dim); text-decoration: none;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-cta {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem; letter-spacing: 0.1em;
+    text-transform: uppercase; text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    border: 1px solid var(--gold); color: var(--gold);
+    border-radius: var(--radius);
+    transition: background 0.2s, color 0.2s;
+  }
+  .nav-cta:hover { background: var(--gold); color: var(--bg); }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 8rem 4rem 5rem;
+    position: relative; overflow: hidden;
+  }
+
+  .hero-grid-lines {
+    position: absolute; inset: 0; z-index: 0;
+    background-image:
+      linear-gradient(rgba(200,151,58,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(200,151,58,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .hero-glow {
+    position: absolute; top: -10%; right: -5%;
+    width: 600px; height: 600px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(200,151,58,0.08) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .hero-content { position: relative; z-index: 1; max-width: 900px; }
+
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1.5rem;
+    display: flex; align-items: center; gap: 0.8rem;
+  }
+  .hero-eyebrow::before {
+    content: ''; display: block;
+    width: 32px; height: 1px; background: var(--gold);
+  }
+
+  .hero-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
+    font-weight: 900; line-height: 1.0;
+    color: var(--text); letter-spacing: -0.02em;
+    margin-bottom: 0.3rem;
+  }
+
+  .hero-name span { color: var(--gold); }
+
+  .hero-title {
+    font-family: 'DM Mono', monospace;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: var(--text-dim); letter-spacing: 0.06em;
+    margin-bottom: 2rem;
+    font-weight: 300;
+  }
+
+  .hero-desc {
+    font-size: 1.1rem; color: var(--text-dim);
+    max-width: 560px; line-height: 1.75;
+    margin-bottom: 3rem;
+  }
+
+  .hero-badges {
+    display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2.5rem;
+  }
+
+  .badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid var(--border);
+    border-radius: 2px; color: var(--text-dim);
+    background: var(--bg2);
+  }
+
+  .badge.active {
+    border-color: var(--gold); color: var(--gold);
+    background: var(--gold-dim);
+  }
+
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .btn-primary {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+    text-decoration: none; padding: 0.85rem 2rem;
+    background: var(--gold); color: var(--bg);
+    border-radius: var(--radius); font-weight: 500;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+  .btn-outline {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+    text-decoration: none; padding: 0.85rem 2rem;
+    border: 1px solid var(--border); color: var(--text-dim);
+    border-radius: var(--radius);
+    transition: border-color 0.2s, color 0.2s, transform 0.15s;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-1px); }
+
+  /* ── SECTIONS ── */
+  section { padding: 6rem 4rem; }
+
+  .section-header {
+    display: flex; align-items: center; gap: 1.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .section-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem; color: var(--gold);
+    letter-spacing: 0.1em;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 700; color: var(--text);
+    letter-spacing: -0.01em;
+  }
+
+  .section-line {
+    flex: 1; height: 1px;
+    background: linear-gradient(to right, var(--border), transparent);
+  }
+
+  /* ── STATS BAR ── */
+  .stats-bar {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border: 1px solid var(--border); border-radius: var(--radius);
+    overflow: hidden; margin-bottom: 5rem;
+  }
+
+  .stat-item {
+    padding: 2rem;
+    border-right: 1px solid var(--border);
+    text-align: center;
+  }
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem; font-weight: 900;
+    color: var(--gold); line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--text-dim);
+  }
+
+  /* ── EDUCATION ── */
+  #education { background: var(--bg2); }
+
+  .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+
+  .edu-card {
+    border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 2rem 2.5rem; background: var(--card);
+    position: relative; overflow: hidden;
+    transition: border-color 0.3s;
+  }
+  .edu-card:hover { border-color: var(--gold); }
+  .edu-card::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(to right, var(--gold), transparent);
+  }
+
+  .edu-degree {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem; font-weight: 700;
+    color: var(--text); margin-bottom: 0.3rem;
+  }
+
+  .edu-school {
+    font-size: 0.9rem; color: var(--gold); margin-bottom: 1rem;
+    font-weight: 400;
+  }
+
+  .edu-meta {
+    display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1rem;
+  }
+
+  .edu-meta-item {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem; letter-spacing: 0.08em;
+    color: var(--text-dim);
+    display: flex; align-items: center; gap: 0.4rem;
+  }
+
+  .edu-courses {
+    font-size: 0.82rem; color: var(--text-faint);
+    line-height: 1.6;
+  }
+
+  /* ── EXPERIENCE ── */
+  .exp-timeline { position: relative; }
+  .exp-timeline::before {
+    content: ''; position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 1px; background: var(--border);
+  }
+
+  .exp-item {
+    padding: 0 0 3.5rem 3rem;
+    position: relative;
+  }
+  .exp-item:last-child { padding-bottom: 0; }
+  .exp-item::before {
+    content: ''; position: absolute;
+    left: -4px; top: 6px;
+    width: 9px; height: 9px; border-radius: 50%;
+    background: var(--gold);
+    box-shadow: 0 0 0 3px var(--bg), 0 0 0 4px var(--gold);
+  }
+
+  .exp-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.5rem;
+  }
+
+  .exp-role {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem; font-weight: 700;
+    color: var(--text); margin-bottom: 0.2rem;
+  }
+
+  .exp-company {
+    font-size: 0.9rem; color: var(--text-dim); margin-bottom: 1.2rem;
+  }
+
+  .exp-points { list-style: none; }
+  .exp-points li {
+    font-size: 0.88rem; color: var(--text-dim);
+    padding: 0.35rem 0; padding-left: 1.2rem;
+    position: relative; line-height: 1.65;
+  }
+  .exp-points li::before {
+    content: '→'; position: absolute; left: 0;
+    color: var(--gold); font-size: 0.75rem;
+  }
+
+  .exp-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.2rem; }
+  .tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem; letter-spacing: 0.08em;
+    padding: 0.25rem 0.6rem; background: var(--bg3);
+    border: 1px solid var(--border); border-radius: 2px;
+    color: var(--text-faint);
+  }
+
+  /* ── PROJECTS ── */
+  #projects { background: var(--bg2); }
+
+  .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+
+  .project-card {
+    border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 2rem; background: var(--card);
+    position: relative; overflow: hidden;
+    transition: border-color 0.3s, transform 0.2s;
+    text-decoration: none; display: block;
+  }
+  .project-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+  .project-card.ongoing { border-color: rgba(200,151,58,0.4); }
+  .project-card.ongoing::after {
+    content: 'ONGOING';
+    position: absolute; top: 1.2rem; right: 1.2rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem; letter-spacing: 0.15em;
+    padding: 0.25rem 0.6rem;
+    background: var(--gold-dim); border: 1px solid var(--gold);
+    color: var(--gold); border-radius: 2px;
+  }
+
+  .project-icon {
+    font-size: 1.8rem; margin-bottom: 1rem;
+  }
+
+  .project-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem; font-weight: 700;
+    color: var(--text); margin-bottom: 0.6rem;
+  }
+
+  .project-desc {
+    font-size: 0.83rem; color: var(--text-dim);
+    line-height: 1.65; margin-bottom: 1.2rem;
+  }
+
+  .project-metrics {
+    display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.2rem;
+  }
+
+  .metric {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem; color: var(--gold);
+    background: var(--gold-dim); border: 1px solid rgba(200,151,58,0.3);
+    padding: 0.2rem 0.55rem; border-radius: 2px;
+  }
+
+  /* ── SKILLS ── */
+  .skills-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+  }
+
+  .skill-group {
+    border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 1.8rem; background: var(--card);
+  }
+
+  .skill-group-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1.2rem;
+    padding-bottom: 0.8rem; border-bottom: 1px solid var(--border);
+  }
+
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .skill-tag {
+    font-size: 0.78rem; color: var(--text-dim);
+    background: var(--bg3); border: 1px solid var(--border);
+    padding: 0.3rem 0.7rem; border-radius: 2px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .skill-tag:hover { border-color: var(--gold); color: var(--text); }
+
+  /* ── CERTIFICATIONS ── */
+  #certifications { background: var(--bg2); }
+
+  .certs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+
+  .cert-card {
+    border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 1.5rem; background: var(--card); text-align: center;
+    transition: border-color 0.3s;
+  }
+  .cert-card:hover { border-color: var(--gold); }
+
+  .cert-icon { font-size: 1.8rem; margin-bottom: 0.8rem; }
+  .cert-name {
+    font-size: 0.82rem; color: var(--text); font-weight: 500;
+    line-height: 1.4; margin-bottom: 0.4rem;
+  }
+  .cert-org {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem; color: var(--gold); letter-spacing: 0.08em;
+  }
+
+  /* ── OPEN SOURCE ── */
+  .opensource-card {
+    border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 2rem 2.5rem; background: var(--card);
+    display: flex; align-items: center; gap: 2.5rem;
+  }
+
+  .os-icon { font-size: 2.5rem; flex-shrink: 0; }
+  .os-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem; font-weight: 700;
+    color: var(--text); margin-bottom: 0.4rem;
+  }
+  .os-desc { font-size: 0.88rem; color: var(--text-dim); line-height: 1.65; }
+
+  /* ── CONTACT ── */
+  #contact {
+    background: var(--bg);
+    text-align: center; padding: 6rem 4rem;
+  }
+
+  .contact-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1rem;
+  }
+
+  .contact-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 900;
+    color: var(--text); margin-bottom: 1rem; line-height: 1.1;
+  }
+
+  .contact-sub {
+    font-size: 1rem; color: var(--text-dim);
+    margin-bottom: 3rem; max-width: 500px; margin-left: auto; margin-right: auto;
+  }
+
+  .contact-links {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .contact-link {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
+    text-decoration: none; padding: 0.7rem 1.5rem;
+    border: 1px solid var(--border); color: var(--text-dim);
+    border-radius: var(--radius);
+    display: flex; align-items: center; gap: 0.5rem;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .contact-link:hover { border-color: var(--gold); color: var(--gold); }
+
+  .availability-pill {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.5rem 1.2rem;
+    background: rgba(76,175,122,0.1); border: 1px solid rgba(76,175,122,0.3);
+    color: var(--green); border-radius: 100px;
+  }
+  .availability-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--green);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%,100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.3); }
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 1.5rem 4rem;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .footer-left {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem; color: var(--text-faint); letter-spacing: 0.08em;
+  }
+  .footer-right {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem; color: var(--text-faint);
+  }
+
+  /* ── ANIMATIONS ── */
+  .fade-in {
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    section, #hero, #contact, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .stats-bar { grid-template-columns: 1fr 1fr; }
+    .stat-item:nth-child(2) { border-right: none; }
+    .edu-grid, .projects-grid, .skills-grid, .certs-grid { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
+
+<!-- NAV -->
 <nav>
-  <div class="nav-name">Harshal Anil Patel</div>
+  <a href="#hero" class="nav-logo">HP</a>
   <ul class="nav-links">
-    <li><a href="#skills">Skills</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="#ai-chat">Ask AI</a></li>
-    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
+  <a href="mailto:harshal27patel@gmail.com" class="nav-cta">Hire Me</a>
 </nav>
 
-<section class="hero" style="border-top:none;padding-top:120px">
-  <div class="hero-left anim">
-    <div class="hero-eyebrow">AI Engineer · Researcher · Builder</div>
-    <h1 class="hero-name">Harshal<br><em>Anil</em><br>Patel</h1>
-    <div class="hero-title">M.S. Artificial Intelligence · University of Florida</div>
-    <p class="hero-desc">Building AI systems that help people and advance knowledge — from multimodal fraud detection to bias monitoring platforms with real-world impact.</p>
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid-lines"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">AI / ML Engineer &amp; Graduate Researcher</div>
+    <h1 class="hero-name">Harshal<br/><span>Patel</span></h1>
+    <p class="hero-title">MS Artificial Intelligence · University of Florida · GPA 3.78</p>
+    <p class="hero-desc">
+      Building production-grade AI systems at the intersection of multimodal learning, explainability, and trustworthy AI.
+      3.3+ years of industry experience at Accenture and Temenos. CPT/OPT Eligible.
+    </p>
     <div class="hero-badges">
-      <span class="badge hot">CPT/OPT Eligible</span>
-      <span class="badge">Summer 2026 Intern</span>
-      <span class="badge">GPA 3.78</span>
-      <span class="badge">3.3+ Yrs Industry</span>
+      <span class="badge active">🟢 Open to Summer 2026 Internships</span>
+      <span class="badge">PyTorch</span>
+      <span class="badge">CUDA / C++</span>
+      <span class="badge">FastAPI</span>
+      <span class="badge">Docker / K8s</span>
+      <span class="badge">AWS</span>
     </div>
-    <div class="cta-row">
-      <a href="mailto:harshal27patel@gmail.com" class="btn-primary-cta">Get in touch →</a>
-      <a href="https://github.com/27HarshalPatel" target="_blank" rel="noopener" class="btn-ghost-cta">GitHub ↗</a>
-    </div>
-  </div>
-  <div class="hero-right anim">
-    <div class="stats-title">At a Glance</div>
-    <div class="stat-row">
-      <div><div class="stat-num">3.3<sup>+</sup></div><div class="stat-label">Years Industry</div></div>
-      <div><div class="stat-num">3.78</div><div class="stat-label">GPA / 4.0</div></div>
-      <div><div class="stat-num">78K</div><div class="stat-label">Items Processed</div></div>
-      <div><div class="stat-num">1K<sup>+</sup></div><div class="stat-label">Active Users</div></div>
-    </div>
-    <div class="divider"></div>
-    <div class="availability-pill"><div class="avail-dot"></div>Available · Summer 2026 SDE / ML Internship</div>
-    <div class="contact-info">📍 Gainesville, FL, USA<br>📧 harshal27patel@gmail.com<br>📱 +1-352-328-6754<br>🎓 UF · Aug 2025 – Jun 2027</div>
-  </div>
-</section>
-
-<section id="skills">
-  <div class="section-header">
-    <div class="section-label anim">Technical Skills</div>
-    <h2 class="section-title anim">What I<br><em>build with</em></h2>
-  </div>
-  <div class="skills-grid">
-    <div class="skill-block anim"><div class="skill-icon">🧠</div><div class="skill-name">AI / ML & Deep Learning</div><div class="skill-desc">PyTorch, TensorFlow, CNNs, Grad-CAM, EfficientNet, DistilBERT, Transformers, Object Detection, Segmentation</div><div class="skill-tags"><span class="skill-tag">PyTorch</span><span class="skill-tag">TensorFlow</span><span class="skill-tag">EfficientNet</span><span class="skill-tag">Transformers</span></div></div>
-    <div class="skill-block anim"><div class="skill-icon">👁️</div><div class="skill-name">Computer Vision</div><div class="skill-desc">OpenCV, scikit-image, image segmentation, contour detection, feature extraction, multimodal pipelines</div><div class="skill-tags"><span class="skill-tag">OpenCV</span><span class="skill-tag">scikit-image</span><span class="skill-tag">Gemini 2.0</span></div></div>
-    <div class="skill-block anim"><div class="skill-icon">⚡</div><div class="skill-name">HPC & GPU Computing</div><div class="skill-desc">CUDA, C++, pybind11, parallel computing, Slurm/OpenHPC cluster provisioning, MPI</div><div class="skill-tags"><span class="skill-tag">CUDA</span><span class="skill-tag">C++</span><span class="skill-tag">pybind11</span><span class="skill-tag">MPI</span></div></div>
-    <div class="skill-block anim"><div class="skill-icon">☁️</div><div class="skill-name">Backend & Cloud</div><div class="skill-desc">FastAPI, Flask, REST APIs, AWS (EC2/S3/Lambda/SageMaker), Docker, Kubernetes, CI/CD, GitHub Actions</div><div class="skill-tags"><span class="skill-tag">FastAPI</span><span class="skill-tag">AWS</span><span class="skill-tag">Docker</span><span class="skill-tag">Kubernetes</span></div></div>
-    <div class="skill-block anim"><div class="skill-icon">🗄️</div><div class="skill-name">Data & Systems</div><div class="skill-desc">PostgreSQL, MongoDB, Redis, Kafka, Prometheus, Grafana, ETL pipelines, Celery async queues</div><div class="skill-tags"><span class="skill-tag">PostgreSQL</span><span class="skill-tag">Redis</span><span class="skill-tag">Kafka</span><span class="skill-tag">Prometheus</span></div></div>
-    <div class="skill-block anim"><div class="skill-icon">🐍</div><div class="skill-name">Languages</div><div class="skill-desc">Python (expert), C++ (proficient), Java, JavaScript, SQL — polyglot across research and production stacks</div><div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">C++</span><span class="skill-tag">Java</span><span class="skill-tag">SQL</span></div></div>
-  </div>
-</section>
-
-<section id="experience">
-  <div class="section-header">
-    <div class="section-label anim">Experience</div>
-    <h2 class="section-title anim">Where I've<br><em>shipped</em></h2>
-  </div>
-  <div class="exp-item anim">
-    <div>
-      <div class="exp-period">Dec 2024 – Aug 2025</div>
-      <div class="exp-company">Accenture</div>
-      <div class="exp-loc">Client: Dell Technologies</div>
-      <div class="exp-loc" style="margin-top:6px">Karnataka, India</div>
-    </div>
-    <div>
-      <div class="exp-role">Custom Software Engineering<br>Senior Analyst</div>
-      <ul class="exp-bullets">
-        <li>Authored C++/CUDA kernels for GPU node health validation on Dell's Omnia HPC/AI cluster; exposed via pybind11 bindings, reducing cluster bring-up time <strong>40%</strong> across 50+ node configurations</li>
-        <li>Built image-based validation using OpenCV &amp; scikit-image to detect config defects in HPC rack deployments — cut manual inspection effort by <strong>60%</strong></li>
-        <li>Engineered Python microservices processing <strong>10M+ records/day</strong> at 99.9% uptime; GitHub Actions CI/CD reduced release cycles 30%</li>
-      </ul>
-      <div class="exp-tags"><span class="exp-tag">C++ / CUDA</span><span class="exp-tag">OpenCV</span><span class="exp-tag">pybind11</span><span class="exp-tag">HPC</span><span class="exp-tag">AWS</span></div>
-    </div>
-  </div>
-  <div class="exp-item anim">
-    <div>
-      <div class="exp-period">Sep 2021 – Dec 2024</div>
-      <div class="exp-company">Temenos</div>
-      <div class="exp-loc">Software Engineer · 3+ Years</div>
-      <div class="exp-loc" style="margin-top:6px">Karnataka, India</div>
-    </div>
-    <div>
-      <div class="exp-role">Software Engineer</div>
-      <ul class="exp-bullets">
-        <li>Designed ETL pipelines ingesting <strong>100K+ banking transactions/day</strong> into PostgreSQL and MongoDB with full data integrity enforcement</li>
-        <li>Reduced REST API p95 latency <strong>60%</strong> to sub-200ms via composite index redesign and Redis caching</li>
-        <li>Implemented ML-based fraud detection module at sub-50ms SLA, reducing false-positive rate by <strong>22%</strong></li>
-        <li>Re-architected batch jobs into RabbitMQ event-driven microservices achieving <strong>3× throughput</strong></li>
-      </ul>
-      <div class="exp-tags"><span class="exp-tag">Python</span><span class="exp-tag">PostgreSQL</span><span class="exp-tag">Redis</span><span class="exp-tag">RabbitMQ</span><span class="exp-tag">ML</span></div>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="https://github.com/27HarshalPatel" target="_blank" class="btn-outline">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/harshal-patel-27" target="_blank" class="btn-outline">LinkedIn ↗</a>
     </div>
   </div>
 </section>
 
-<section id="projects">
-  <div class="section-header">
-    <div class="section-label anim">Projects</div>
-    <h2 class="section-title anim">Things I've<br><em>built</em></h2>
-  </div>
-  <div class="projects-grid">
-    <div class="project-card anim">
-      <div class="project-num">01</div><div class="project-name">FraudLens</div>
-      <div class="project-stack">PyTorch · EfficientNet-B0 · DistilBERT · FastAPI · React · Docker</div>
-      <div class="project-desc">Multimodal fraud detection combining CNN image analysis, transformer text understanding, and structured metadata into a unified fraud score — with Grad-CAM explainability heatmaps.</div>
-      <div class="project-metrics"><div><div class="metric-val">3</div><div class="metric-label">Modalities</div></div><div><div class="metric-val">Grad-CAM</div><div class="metric-label">Explainability</div></div></div>
+<!-- STATS -->
+<section id="about" style="padding: 3rem 4rem;">
+  <div class="stats-bar fade-in">
+    <div class="stat-item">
+      <div class="stat-num">3.3+</div>
+      <div class="stat-label">Years Industry Exp.</div>
     </div>
-    <div class="project-card anim">
-      <div class="project-num">02</div><div class="project-name">Fashion Aura</div>
-      <div class="project-stack">FastAPI · OpenCV · scikit-image · Gemini 2.0 Flash · Docker · Nginx</div>
-      <div class="project-desc">Computer vision pipeline for garment segmentation &amp; feature extraction across 78K catalog items. Gemini 2.0 Flash powers virtual try-on, deployed with horizontal autoscaling.</div>
-      <div class="project-metrics"><div><div class="metric-val">78K</div><div class="metric-label">Catalog Items</div></div><div><div class="metric-val">95%</div><div class="metric-label">Accuracy</div></div><div><div class="metric-val">1K+</div><div class="metric-label">Concurrent Req/s</div></div></div>
+    <div class="stat-item">
+      <div class="stat-num">3.78</div>
+      <div class="stat-label">MS GPA @ UF</div>
     </div>
-    <div class="project-card anim">
-      <div class="project-num">03</div><div class="project-name">TrustCheckAI</div>
-      <div class="project-stack">Python · Prometheus · Grafana · Streamlit · Slack · Docker</div>
-      <div class="project-desc">Real-time ML bias &amp; compliance monitoring platform with SHAP explainability, drift detection, and automated Slack alerting for 1,000+ active users processing 10K+ events/day.</div>
-      <div class="project-metrics"><div><div class="metric-val">1K+</div><div class="metric-label">Active Users</div></div><div><div class="metric-val">45%</div><div class="metric-label">MTTR Reduction</div></div><div><div class="metric-val">10K+</div><div class="metric-label">Events/Day</div></div></div>
+    <div class="stat-item">
+      <div class="stat-num">5+</div>
+      <div class="stat-label">Production Projects</div>
     </div>
-    <div class="project-card anim">
-      <div class="project-num">04</div><div class="project-name">Support Ticket System</div>
-      <div class="project-stack">Django · DistilBERT · PostgreSQL · Redis · Celery · Docker</div>
-      <div class="project-desc">Fine-tuned DistilBERT NLP classifier to 91% accuracy across 8 ticket categories. Eliminated 70% manual triage via async Celery queues sustaining 10K+ API requests/day.</div>
-      <div class="project-metrics"><div><div class="metric-val">91%</div><div class="metric-label">NLP Accuracy</div></div><div><div class="metric-val">70%</div><div class="metric-label">Manual Triage Cut</div></div></div>
+    <div class="stat-item">
+      <div class="stat-num">4</div>
+      <div class="stat-label">Certifications</div>
     </div>
   </div>
 </section>
 
-<section id="ai-chat">
-  <div class="section-header">
-    <div class="section-label anim">AI Assistant</div>
-    <h2 class="section-title anim">Ask me<br><em>anything</em></h2>
-  </div>
-  <div class="chat-container">
-    <p class="chat-intro">Smart knowledge base built from Harshal's resume. Ask about his background, projects, skills, or fit for your role.</p>
-    <div class="quick-questions">
-      <button class="quick-q" onclick="askQ(this)">What's your strongest skill?</button>
-      <button class="quick-q" onclick="askQ(this)">Why hire Harshal for ML?</button>
-      <button class="quick-q" onclick="askQ(this)">Tell me about TrustCheckAI</button>
-      <button class="quick-q" onclick="askQ(this)">Industry experience summary</button>
-      <button class="quick-q" onclick="askQ(this)">What roles is he targeting?</button>
-    </div>
-    <div class="chat-window">
-      <div class="chat-header"><div class="chat-dot"></div>HARSHAL·AI — Resume Intelligence · Ask Anything</div>
-      <div class="chat-messages" id="chatMessages">
-        <div class="msg assistant">Hi! I'm Harshal's AI assistant. I know everything about his background, projects, and experience. Ask me anything — or try a quick question above! 👋</div>
-      </div>
-      <div class="chat-input-row">
-        <input class="chat-input" id="chatInput" placeholder="Ask about skills, projects, availability...">
-        <button class="chat-send" id="chatSend">Send →</button>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- EDUCATION -->
 <section id="education">
-  <div class="section-header">
-    <div class="section-label anim">Education</div>
-    <h2 class="section-title anim">Where I've<br><em>learned</em></h2>
+  <div class="section-header fade-in">
+    <span class="section-num">01</span>
+    <h2 class="section-title">Education</h2>
+    <div class="section-line"></div>
   </div>
   <div class="edu-grid">
-    <div class="edu-card anim">
-      <div class="edu-degree">Master of Science<br>in Artificial Intelligence</div>
-      <div class="edu-school">University of Florida</div>
-      <div class="edu-details">Aug 2025 – Jun 2027 · GPA 3.78/4.0 · Gainesville, FL</div>
-      <div class="edu-courses">Applied Deep Learning · Computer Vision · Machine Learning · Signal Processing · NLP · AI Ethics · Distributed Systems · IoT Systems</div>
+    <div class="edu-card fade-in">
+      <div class="edu-degree">Master of Science in Artificial Intelligence</div>
+      <div class="edu-school">University of Florida, Gainesville, FL</div>
+      <div class="edu-meta">
+        <span class="edu-meta-item">📅 Aug 2025 – Jun 2027</span>
+        <span class="edu-meta-item">📊 GPA: 3.78 / 4.0</span>
+      </div>
+      <div class="edu-courses">
+        Applied Deep Learning · Computer Vision · Machine Learning · Signal Processing ·
+        NLP · AI Ethics · Distributed Systems · IoT Systems
+      </div>
     </div>
-    <div class="edu-card anim">
-      <div class="edu-degree">Bachelor of Technology<br>in Computer Science</div>
-      <div class="edu-school">Visvesvaraya Technological University</div>
-      <div class="edu-details">Aug 2017 – Sep 2021 · GPA 8.8/10.0 · Karnataka, India</div>
-      <div class="edu-courses" style="margin-top:12px">Published: "Prediction of IPL Match Outcome Using ML" — ICIIC-2021 International Conference</div>
-    </div>
-  </div>
-  <div style="margin-top:40px">
-    <div class="section-label anim" style="margin-bottom:20px">Certifications</div>
-    <div class="certs-row anim">
-      <div class="cert-chip">☁️ AWS Cloud Technical Essentials</div>
-      <div class="cert-chip">🔷 Azure Fundamentals (AZ-900)</div>
-      <div class="cert-chip">⚙️ Kubernetes (KCNA)</div>
-      <div class="cert-chip">🤖 Deep Learning (NVIDIA)</div>
+    <div class="edu-card fade-in">
+      <div class="edu-degree">B.Tech in Computer Science &amp; Engineering</div>
+      <div class="edu-school">Visvesvaraya Technological University, Karnataka, India</div>
+      <div class="edu-meta">
+        <span class="edu-meta-item">📅 Aug 2017 – Sep 2021</span>
+        <span class="edu-meta-item">📊 GPA: 8.8 / 10 (≈3.8/4.0)</span>
+      </div>
+      <div class="edu-courses">
+        Data Structures &amp; Algorithms · Machine Learning · Database Systems ·
+        Computer Networks · Operating Systems · Software Engineering
+      </div>
     </div>
   </div>
 </section>
 
-<footer>
-  <div class="footer-name">Harshal Anil Patel</div>
-  <div class="footer-links">
-    <a href="mailto:harshal27patel@gmail.com">Email</a>
-    <a href="https://linkedin.com/in/harshal-patel" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="https://github.com/27HarshalPatel" target="_blank" rel="noopener">GitHub</a>
-    <a href="#ai-chat">Ask AI</a>
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-header fade-in">
+    <span class="section-num">02</span>
+    <h2 class="section-title">Experience</h2>
+    <div class="section-line"></div>
   </div>
+  <div class="exp-timeline">
+
+    <div class="exp-item fade-in">
+      <div class="exp-date">Dec 2024 – Aug 2025</div>
+      <div class="exp-role">Custom Software Engineering Senior Analyst</div>
+      <div class="exp-company">Accenture · Client: Dell Technologies · Karnataka, India</div>
+      <ul class="exp-points">
+        <li>Authored C++/CUDA kernels for GPU node health validation; exposed to Python via pybind11 bindings — reduced cluster bring-up time by <strong>40%</strong> across 50+ node configurations.</li>
+        <li>Implemented OpenCV / scikit-image validation module for HPC rack configuration defect detection, cutting manual inspection effort by <strong>60%</strong>.</li>
+        <li>Engineered Python microservices processing <strong>10M+ records/day</strong> at 99.9% uptime with retry logic, circuit breakers, and dead-letter queues.</li>
+        <li>Built GitHub Actions CI/CD pipelines with AWS deployments reducing release cycle by <strong>30%</strong>.</li>
+        <li>Contributed to <strong>Dell Omnia</strong> open-source HPC/AI cluster provisioning platform (C++/CUDA modules + pybind11).</li>
+      </ul>
+      <div class="exp-tags">
+        <span class="tag">C++ / CUDA</span><span class="tag">pybind11</span>
+        <span class="tag">OpenCV</span><span class="tag">Python</span>
+        <span class="tag">AWS</span><span class="tag">GitHub Actions</span>
+        <span class="tag">HPC / Slurm</span>
+      </div>
+    </div>
+
+    <div class="exp-item fade-in">
+      <div class="exp-date">Sep 2021 – Dec 2024</div>
+      <div class="exp-role">Software Engineer</div>
+      <div class="exp-company">Temenos · Karnataka, India</div>
+      <ul class="exp-points">
+        <li>Designed ETL pipelines ingesting <strong>100K+ banking transactions/day</strong> into PostgreSQL and MongoDB with schema validation and idempotency.</li>
+        <li>Reduced REST API p95 latency by <strong>60%</strong> (to sub-200ms) via composite index redesign and Redis caching.</li>
+        <li>Re-architected batch jobs into RabbitMQ event-driven microservices achieving <strong>3× throughput</strong>.</li>
+        <li>Implemented ML-based fraud detection module (sub-50ms SLA) reducing false-positive rate by <strong>22%</strong>.</li>
+      </ul>
+      <div class="exp-tags">
+        <span class="tag">Python</span><span class="tag">PostgreSQL</span>
+        <span class="tag">MongoDB</span><span class="tag">Redis</span>
+        <span class="tag">RabbitMQ</span><span class="tag">ML / Fraud Detection</span>
+        <span class="tag">REST APIs</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-header fade-in">
+    <span class="section-num">03</span>
+    <h2 class="section-title">Projects</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="projects-grid">
+
+    <a href="https://github.com/27HarshalPatel/MultiModal-Fraudlens" target="_blank" class="project-card ongoing fade-in">
+      <div class="project-icon">🔍</div>
+      <div class="project-name">FraudLens — MultiModal Fraud Detection</div>
+      <div class="project-desc">
+        Production-grade fraud detection pipeline fusing SigLIP 2 (vision), DistilBERT (NLP), and structured transaction analysis
+        via learned cross-modal attention. Includes Captum XAI explainability with per-modality integrated gradients.
+      </div>
+      <div class="project-metrics">
+        <span class="metric">SigLIP 2 + DistilBERT</span>
+        <span class="metric">Cross-Modal Attention</span>
+        <span class="metric">Captum XAI</span>
+        <span class="metric">FastAPI</span>
+        <span class="metric">Docker</span>
+      </div>
+      <div class="exp-tags">
+        <span class="tag">PyTorch</span><span class="tag">Hugging Face</span>
+        <span class="tag">FastAPI</span><span class="tag">Docker</span>
+      </div>
+    </a>
+
+    <a href="https://github.com/27HarshalPatel/TrustCheckAI" target="_blank" class="project-card fade-in">
+      <div class="project-icon">🛡️</div>
+      <div class="project-name">TrustCheckAI — ML Bias &amp; Compliance Monitor</div>
+      <div class="project-desc">
+        Real-time ML bias and compliance monitoring platform with Prometheus/Grafana dashboards tracking fairness
+        and SLA compliance for 1,000+ active users. Reduces MTTR by 45% via automated alerting.
+      </div>
+      <div class="project-metrics">
+        <span class="metric">1,000+ users</span>
+        <span class="metric">10K+ events/day</span>
+        <span class="metric">45% ↓ MTTR</span>
+      </div>
+      <div class="exp-tags">
+        <span class="tag">Prometheus</span><span class="tag">Grafana</span>
+        <span class="tag">Streamlit</span><span class="tag">LIME</span>
+        <span class="tag">Slack</span>
+      </div>
+    </a>
+
+    <a href="https://github.com/27HarshalPatel/Fashion-Aura" target="_blank" class="project-card fade-in">
+      <div class="project-icon">👗</div>
+      <div class="project-name">Fashion Aura — AI Virtual Try-On</div>
+      <div class="project-desc">
+        Computer vision pipeline for garment segmentation across a 78,000-item catalog with 95% accuracy.
+        Powered by Gemini 2.0 Flash multimodal model with async handling of 1,000+ concurrent requests sub-3s.
+      </div>
+      <div class="project-metrics">
+        <span class="metric">78K+ catalog items</span>
+        <span class="metric">95% accuracy</span>
+        <span class="metric">1K+ concurrent req.</span>
+      </div>
+      <div class="exp-tags">
+        <span class="tag">OpenCV</span><span class="tag">Gemini 2.0 Flash</span>
+        <span class="tag">FastAPI</span><span class="tag">AWS S3</span>
+        <span class="tag">Nginx</span>
+      </div>
+    </a>
+
+    <div class="project-card fade-in">
+      <div class="project-icon">🎫</div>
+      <div class="project-name">Support Ticket System — NLP Auto-Triage</div>
+      <div class="project-desc">
+        Fine-tuned DistilBERT NLP classifier achieving 91% accuracy across 8 ticket categories.
+        Eliminated 70% manual triage via Celery async queues, sustaining 10,000+ API requests/day.
+      </div>
+      <div class="project-metrics">
+        <span class="metric">91% accuracy</span>
+        <span class="metric">10K+ req/day</span>
+        <span class="metric">70% triage reduced</span>
+      </div>
+      <div class="exp-tags">
+        <span class="tag">Django</span><span class="tag">DistilBERT</span>
+        <span class="tag">PostgreSQL</span><span class="tag">Redis</span>
+        <span class="tag">Celery</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-header fade-in">
+    <span class="section-num">04</span>
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-group fade-in">
+      <div class="skill-group-title">Languages</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">C++</span>
+        <span class="skill-tag">Java</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">SQL</span>
+      </div>
+    </div>
+    <div class="skill-group fade-in">
+      <div class="skill-group-title">AI / ML</div>
+      <div class="skill-tags">
+        <span class="skill-tag">PyTorch</span>
+        <span class="skill-tag">TensorFlow</span>
+        <span class="skill-tag">scikit-learn</span>
+        <span class="skill-tag">Hugging Face</span>
+        <span class="skill-tag">OpenCV</span>
+        <span class="skill-tag">Grad-CAM</span>
+        <span class="skill-tag">Captum XAI</span>
+      </div>
+    </div>
+    <div class="skill-group fade-in">
+      <div class="skill-group-title">HPC &amp; GPU</div>
+      <div class="skill-tags">
+        <span class="skill-tag">CUDA</span>
+        <span class="skill-tag">pybind11</span>
+        <span class="skill-tag">MPI</span>
+        <span class="skill-tag">OpenHPC</span>
+        <span class="skill-tag">Slurm</span>
+      </div>
+    </div>
+    <div class="skill-group fade-in">
+      <div class="skill-group-title">Backend &amp; Cloud</div>
+      <div class="skill-tags">
+        <span class="skill-tag">FastAPI</span>
+        <span class="skill-tag">Flask</span>
+        <span class="skill-tag">Django</span>
+        <span class="skill-tag">AWS</span>
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">Kubernetes</span>
+        <span class="skill-tag">CI/CD</span>
+      </div>
+    </div>
+    <div class="skill-group fade-in">
+      <div class="skill-group-title">Databases &amp; Systems</div>
+      <div class="skill-tags">
+        <span class="skill-tag">PostgreSQL</span>
+        <span class="skill-tag">MongoDB</span>
+        <span class="skill-tag">Redis</span>
+        <span class="skill-tag">Kafka</span>
+        <span class="skill-tag">MySQL</span>
+        <span class="skill-tag">Linux</span>
+      </div>
+    </div>
+    <div class="skill-group fade-in">
+      <div class="skill-group-title">Monitoring &amp; Ops</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Prometheus</span>
+        <span class="skill-tag">Grafana</span>
+        <span class="skill-tag">GitHub Actions</span>
+        <span class="skill-tag">Postman</span>
+        <span class="skill-tag">MATLAB</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="section-header fade-in">
+    <span class="section-num">05</span>
+    <h2 class="section-title">Certifications</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="certs-grid">
+    <div class="cert-card fade-in">
+      <div class="cert-icon">☁️</div>
+      <div class="cert-name">AWS Cloud Technical Essentials</div>
+      <div class="cert-org">Amazon Web Services</div>
+    </div>
+    <div class="cert-card fade-in">
+      <div class="cert-icon">🔷</div>
+      <div class="cert-name">Azure Fundamentals (AZ-900)</div>
+      <div class="cert-org">Microsoft</div>
+    </div>
+    <div class="cert-card fade-in">
+      <div class="cert-icon">⚙️</div>
+      <div class="cert-name">Intro to Kubernetes (KCNA)</div>
+      <div class="cert-org">Cloud Native Foundation</div>
+    </div>
+    <div class="cert-card fade-in">
+      <div class="cert-icon">🧠</div>
+      <div class="cert-name">Deep Learning Specialization</div>
+      <div class="cert-org">NVIDIA</div>
+    </div>
+  </div>
+
+  <br/><br/>
+
+  <!-- Open Source -->
+  <div class="opensource-card fade-in">
+    <div class="os-icon">🌐</div>
+    <div>
+      <div class="os-title">Open Source · Dell Omnia</div>
+      <div class="os-desc">
+        Contributor to <strong>Omnia by Dell Technologies</strong> — open-source HPC/AI cluster provisioning tool.
+        Contributed C++/CUDA algorithm modules with pybind11 Python bindings, GPU node automation scripts,
+        and an image-based configuration validation module.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-eyebrow">Get In Touch</div>
+  <h2 class="contact-heading">Let's Build<br/>Something Together</h2>
+  <p class="contact-sub">
+    Open to Summer 2026 internship opportunities in AI/ML Engineering &amp; Software Engineering. Let's connect.
+  </p>
+  <div class="contact-links">
+    <a href="mailto:harshal27patel@gmail.com" class="contact-link">✉️ harshal27patel@gmail.com</a>
+    <a href="tel:+13523286754" class="contact-link">📞 +1-352-328-6754</a>
+    <a href="https://github.com/27HarshalPatel" target="_blank" class="contact-link">⚡ GitHub</a>
+    <a href="https://www.linkedin.com/in/harshal-patel-27" target="_blank" class="contact-link">💼 LinkedIn</a>
+  </div>
+  <div class="availability-pill">
+    <span class="availability-dot"></span>
+    Available for Summer 2026 Internships
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-left">© 2026 Harshal Patel · Built with HTML/CSS/JS · Hosted on GitHub Pages</span>
+  <span class="footer-right">Gainesville, FL · CPT / OPT Eligible</span>
 </footer>
 
 <script>
-/* === REVEAL: Safe animation that works on GitHub Pages ===
-   Content is VISIBLE by default (no opacity:0 in CSS).
-   JS adds .js-ready class → fades elements in on scroll.
-   Hero elements get .in class instantly since they're in viewport. */
-window.addEventListener('load', function() {
-  var elems = document.querySelectorAll('.anim');
-  document.body.classList.add('js-ready');
-
-  if (!('IntersectionObserver' in window)) {
-    elems.forEach(function(el){ el.classList.add('in'); });
-    return;
-  }
-
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+  // Intersection Observer for fade-in animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
     });
-  }, { threshold: 0.06, rootMargin: '0px 0px -10px 0px' });
+  }, { threshold: 0.1 });
 
-  elems.forEach(function(el){
-    var r = el.getBoundingClientRect();
-    if(r.top < window.innerHeight && r.bottom >= 0){
-      // Already in viewport — show without delay
-      el.classList.add('in');
-    } else {
-      io.observe(el);
-    }
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Active nav link on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(sec => {
+      if (window.scrollY >= sec.offsetTop - 120) current = sec.getAttribute('id');
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === `#${current}` ? 'var(--gold)' : '';
+    });
   });
-});
-
-/* === CHAT: 100% local, no API, works everywhere === */
-var QA = [
-  { keys:['strongest skill','best skill','top skill','expertise','speciali'],
-    ans:"Harshal's strongest area is the intersection of ML systems and production engineering. He builds end-to-end AI pipelines — from training multimodal models (EfficientNet + DistilBERT) to deploying them at scale with FastAPI, Docker, and AWS. His rare combo: 3.3+ years of industry engineering at Accenture & Temenos plus graduate-level AI research at UF (GPA 3.78) makes him unusually strong in taking ML from notebook to production." },
-  { keys:['why hire','hire harshal','ml role','ml engineer','machine learning','ai engineer'],
-    ans:"Hire Harshal for ML because he doesn't just train models — he ships them. At Accenture he wrote CUDA kernels and pybind11 bindings cutting HPC cluster bring-up by 40%. At Temenos he deployed a fraud detection module at sub-50ms SLA, reducing false positives 22%. His projects span multimodal CV (Fashion Aura, 95% accuracy on 78K items), bias monitoring (TrustCheckAI, 1K+ users), and NLP classification (91% accuracy). He's production-first." },
-  { keys:['trustcheckai','trust check','bias','compliance','monitoring','fairness','shap'],
-    ans:"TrustCheckAI is Harshal's real-time ML bias and compliance monitoring platform. It uses Prometheus & Grafana to track model fairness and SLA compliance, serves 1,000+ active users, and processes 10K+ events per day. When accuracy degrades, it automatically triggers model retraining and fires Slack on-call alerts — reducing MTTR by 45%. It also includes SHAP explainability for interpretable fairness audits." },
-  { keys:['fashion aura','fashion','garment','virtual try','opencv','scikit'],
-    ans:"Fashion Aura is a computer vision pipeline using OpenCV and scikit-image for garment segmentation, contour detection, and feature extraction across a 78,000-item fashion catalog — achieving 95% classification accuracy. The async image-processing service handles 1,000+ concurrent requests in under 3 seconds. Gemini 2.0 Flash powers AI-driven virtual try-on, deployed behind Nginx with horizontal autoscaling." },
-  { keys:['fraudlens','fraud','efficientnet','distilbert','multimodal','grad-cam','explainab'],
-    ans:"FraudLens is Harshal's multimodal fraud detection system combining EfficientNet-B0 CNN (image tampering), DistilBERT (transaction text), and an MLP (structured metadata) — all fused into a unified fraud score. Grad-CAM heatmaps localize image regions triggering fraud signals, making the model explainable. Deployed via FastAPI + React on Docker and Hugging Face Spaces." },
-  { keys:['support ticket','ticket','django','celery','nlp','triage'],
-    ans:"Harshal's Support Ticket System fine-tuned DistilBERT to 91% accuracy across 8 ticket categories, eliminating 70% of manual triage. It sustains 10,000+ API requests per day at 100% availability using Celery async queues with Redis — all containerized with Docker." },
-  { keys:['experience','industry','accenture','temenos','work history','background','career'],
-    ans:"Harshal has 3.3+ years of industry experience. At Accenture (Dec 2024–Aug 2025) he worked on Dell Technologies' Omnia HPC/AI cluster — writing C++/CUDA kernels, building OpenCV-based image validation, and engineering microservices processing 10M+ records/day at 99.9% uptime. At Temenos (Sep 2021–Dec 2024) he built ETL pipelines for 100K+ banking transactions/day, cut API latency 60%, and deployed an ML fraud detection module." },
-  { keys:['education','university','florida','uf','gpa','degree','masters','ms'],
-    ans:"Harshal is pursuing an M.S. in Artificial Intelligence at the University of Florida (GPA 3.78/4.0, graduating Jun 2027). Coursework covers Applied Deep Learning, Computer Vision, NLP, Signal Processing, AI Ethics, and Distributed Systems. He holds a B.Tech in CS from Visvesvaraya Technological University (GPA 8.8/10.0) and published at ICIIC-2021." },
-  { keys:['role','target','internship','job','position','summer','2026','hiring','available'],
-    ans:"Harshal is actively targeting Summer 2026 SDE and ML/AI internships in the US. He's CPT/OPT eligible (F-1 visa), based in Gainesville, FL, and open to ML engineering, computer vision, backend, or AI research roles. Especially interested in generative AI, explainability, or real-world ML impact. Reach him at harshal27patel@gmail.com." },
-  { keys:['cuda','hpc','gpu','kernel','parallel','c++','pybind','omnia','dell'],
-    ans:"At Accenture (Dell Technologies' Omnia), Harshal authored C++/CUDA kernels for GPU node health validation on HPC/AI clusters. He exposed these to Python via pybind11 bindings, reducing cluster bring-up time by 40% across 50+ node configurations. He also built image-based rack validation using OpenCV, cutting manual inspection effort by 60%." },
-  { keys:['contact','email','phone','linkedin','github','reach','connect'],
-    ans:"You can reach Harshal at:\n📧 harshal27patel@gmail.com\n📱 +1-352-328-6754\n🔗 github.com/27HarshalPatel\n📍 Gainesville, FL\n\nHe's actively seeking Summer 2026 internships and responds quickly!" },
-  { keys:['certif','aws','azure','kubernetes','nvidia'],
-    ans:"Harshal holds 4 certifications: AWS Cloud Technical Essentials, Azure Fundamentals (AZ-900), Introduction to Kubernetes (KCNA), and NVIDIA Deep Learning." },
-  { keys:['open source','omnia','contributor'],
-    ans:"Harshal is an open-source contributor to Dell Technologies' Omnia — an HPC/AI cluster provisioning tool. His contributions include C++/CUDA algorithm modules with pybind11 Python bindings, GPU node automation, and OpenCV-based configuration validation." }
-];
-
-var fallbacks = [
-  "Great question! Harshal has 3.3+ years of industry ML/SWE experience and is pursuing his M.S. in AI at UF (GPA 3.78). Try asking about his projects, skills, or Summer 2026 availability!",
-  "Harshal is an AI engineer with research depth (UF M.S. AI) and production experience (Accenture, Temenos). Ask me about FraudLens, Fashion Aura, TrustCheckAI, or his availability!",
-  "Happy to help! Ask about his ML projects, work at Accenture or Temenos, education at UF, or Summer 2026 internship targeting.",
-];
-
-function matchAns(q) {
-  var ql = q.toLowerCase(), best = null, score = 0;
-  QA.forEach(function(item){
-    var s = item.keys.filter(function(k){ return ql.indexOf(k) > -1; }).length;
-    if(s > score){ score = s; best = item; }
-  });
-  return (best && score > 0) ? best.ans : fallbacks[Math.floor(Math.random()*fallbacks.length)];
-}
-
-function appendMsg(text, type) {
-  var msgs = document.getElementById('chatMessages');
-  var el = document.createElement('div');
-  el.className = 'msg ' + type;
-  el.textContent = text;
-  msgs.appendChild(el);
-  msgs.scrollTop = msgs.scrollHeight;
-  return el;
-}
-
-function sendMsg() {
-  var input = document.getElementById('chatInput');
-  var send = document.getElementById('chatSend');
-  var msg = input.value.trim();
-  if(!msg) return;
-  input.value = '';
-  send.disabled = true;
-  appendMsg(msg, 'user');
-  var typing = appendMsg('● ● ●', 'typing');
-  setTimeout(function(){
-    typing.remove();
-    appendMsg(matchAns(msg), 'assistant');
-    send.disabled = false;
-    input.focus();
-  }, 600 + Math.random()*400);
-}
-
-function askQ(btn) {
-  document.getElementById('chatInput').value = btn.textContent;
-  sendMsg();
-}
-
-document.getElementById('chatSend').addEventListener('click', sendMsg);
-document.getElementById('chatInput').addEventListener('keydown', function(e){
-  if(e.key === 'Enter') sendMsg();
-});
 </script>
 </body>
 </html>
